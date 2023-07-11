@@ -41,6 +41,24 @@ class Pedido {
         }
     }
 
+    alterarDescricao(codigo, novaDescricao){
+        if (codigo != '') {
+
+            let resultado = this.itens.findIndex(item => item.codigo === codigo)
+
+            if (resultado == -1) {
+                console.log("Item não encontrado na Nota");
+                return
+            }
+
+            this.itens[resultado].descricao = novaDescricao
+            console.log(`Item de codigo: ${codigo} alterado com sucesso na nota!`);
+
+        } else {
+            console.log("Passe um codigo valido!!");
+        }
+    }
+
 }
 
 let novoPedido = new Pedido()
