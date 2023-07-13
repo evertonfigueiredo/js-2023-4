@@ -25,10 +25,10 @@ function exibirAulas() {
         let tituloH2 = document.createElement("h2")
         // tituloH2.className = "titulo"
         tituloH2.textContent = titulo
-    
+
         corpoDiv.appendChild(tituloH2)
 
-        let deleteButton = document.createElement("button") 
+        let deleteButton = document.createElement("button")
         deleteButton.textContent = "Deletar Aula"
         deleteButton.onclick = () => {
             chamarAlerta(index)
@@ -36,7 +36,7 @@ function exibirAulas() {
 
         corpoDiv.appendChild(deleteButton)
 
-        let editarButton = document.createElement("button") 
+        let editarButton = document.createElement("button")
         editarButton.textContent = "Editar Aula"
         editarButton.onclick = chamarAlerta
 
@@ -56,4 +56,11 @@ function adicionarAula() {
 
 function chamarAlerta(index) {
     alert(index)
+}
+
+function chamadaFuncao() {
+    let paragrafoP = document.querySelector("#paragrafo")
+    let chamadaButton = document.querySelector("#buttonChamada")
+
+    paragrafoP.textContent = "Texto alterado com Sucesso!"
 }
